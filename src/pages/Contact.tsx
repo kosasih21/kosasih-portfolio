@@ -1,35 +1,50 @@
+import { AppShell, Button } from '@mantine/core';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import Header from '../components/Header';
+
 const Contact = () => {
     return (
-        <div className="container">
-            <h2>Let's Connect 👇</h2>
-            <p>
-                Feel free to reach out to me through any of the platforms below:
-            </p>
-            <div className="link-container">
-                <a 
-                    href="https://github.com/kosasih21" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="link"
-                >
-                    GitHub
-                </a>
-                <a 
-                    href="https://www.linkedin.com/in/vincentius-kosasih" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="link"
-                >
-                    LinkedIn
-                </a>
-                <a 
-                    href="mailto:vincentius.kosasih@example.com" 
-                    className="link"
-                >
-                    Email
-                </a>
-            </div>
-        </div>
+        <AppShell header={{ height: 60 }} padding="md">
+            <Header />
+            <AppShell.Main>
+                <div className="container">
+                    <h2>Let's Connect 👇</h2>
+                    <p>
+                        Feel free to reach out to me through any of the platforms below:
+                    </p>
+                    <div className="link-container">
+                        <Button
+                            component="a"
+                            href="https://github.com/kosasih21"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            leftSection={<Github size={18} />}
+                            className="connect-button"
+                        >
+                            GitHub
+                        </Button>
+                        <Button
+                            component="a"
+                            href="https://www.linkedin.com/in/vincentius-kosasih"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            leftSection={<Linkedin size={18} />}
+                            className="connect-button"
+                        >
+                            LinkedIn
+                        </Button>
+                        <Button
+                            component="a"
+                            href="mailto:vincentius.kosasih@example.com"
+                            leftSection={<Mail size={18} />}
+                            className="connect-button"
+                        >
+                            Email
+                        </Button>
+                    </div>
+                </div>
+            </AppShell.Main>
+        </AppShell>
     );
 };
 

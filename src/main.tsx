@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './styles/globals.css'; // Import global styles
+import { MantineProvider } from '@mantine/core';
+import './styles/globals.css';
+import '@mantine/core/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <MantineProvider
+            withGlobalStyles
+            withNormalizeCSS
+            theme={{
+                defaultColorScheme: 'dark', // Ensures the theme matches your dark UI
+            }}
+        >
+            <App />
+        </MantineProvider>
     </React.StrictMode>
 );
