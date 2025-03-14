@@ -1,6 +1,7 @@
 
 import { AppShell, Card, Text, Button, Group, Badge } from '@mantine/core';
 import Header from '../components/Header';
+import ParticlesBg from '../components/ParticlesBg';
 
 const Projects = () => {
     const projects = [
@@ -57,12 +58,15 @@ const Projects = () => {
     return (
         <AppShell header={{ height: 60 }} padding="md">
             <Header />
+            <ParticlesBg />
             <AppShell.Main
                 style={{
                     width: '100%',
                     maxWidth: '100vw',
                     flexGrow: 1,
                     overflowX: 'visible',
+                    backgroundColor: 'transparent',
+                    backdropFilter: 'blur(3px)',
                 }}
             >
                 <div className="projects-container fade-in">

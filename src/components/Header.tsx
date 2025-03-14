@@ -1,11 +1,12 @@
 import { AppShell, Button } from '@mantine/core';
+import ProjectDropdown from './ProjectDropdown';
 
 const Header = () => {
     return (
         <AppShell.Header style={{ 
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)', 
             backgroundColor: 'transparent',
-            backdropFilter: 'blur(5px)', // Optional for a frosted glass effect
+            backdropFilter: 'blur(5px)',
         }}>
             <div className="header">
                 <div className="header-buttons">
@@ -33,18 +34,7 @@ const Header = () => {
                     >
                         About
                     </Button>
-                    <Button
-                        variant="subtle"
-                        component="a"
-                        href="/projects"
-                        className="nav-button"
-                        style={{
-                            color: '#1DB954',
-                            '--button-hover': '#1f271f',
-                        }}
-                    >
-                        Projects
-                    </Button>
+                    <ProjectDropdown />
                     <Button
                         variant="subtle"
                         component="a"

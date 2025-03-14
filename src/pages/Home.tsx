@@ -8,12 +8,16 @@ const Home = () => {
     return (
         <AppShell header={{ height: 60 }} padding="md">
             <Header />
-            <AppShell.Main style={{ position: 'relative', overflow: 'hidden' }}>
-                <ParticlesBg />
+            <ParticlesBg />
+            <AppShell.Main style={{ 
+                backgroundColor: 'transparent',
+                position: 'relative',
+                overflow: 'hidden',
+            }}>
                 <div className="container fade-in">
                     <div className="hero">
-                        <h1>Hi, I'm Vincentius Kosasih 👋</h1>
-                        <p>
+                        <h1 className="non-clickable">Hi, I'm Vincentius Kosasih 👋</h1>
+                        <p className="non-clickable">
                             I'm a software developer passionate about embedded systems, FPGA, React, and web development.
                             I love combining hardware and software to build efficient and scalable solutions.
                         </p>

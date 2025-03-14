@@ -29,6 +29,13 @@ const ParticlesBg = () => {
             <Particles
                 id="tsparticles"
                 particlesLoaded={particlesLoaded}
+                style={{
+                    position: 'absolute', // ✅ Dynamic height based on parent container
+                    width: '100%',
+                    height: '100%',
+                    top: 0,
+                    left: 0,
+                }}
                 options={{
                     fullScreen: { enable: true, zIndex: -1 },
                     particles: {

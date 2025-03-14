@@ -1,11 +1,16 @@
 import { AppShell, Blockquote } from '@mantine/core';
 import Header from '../components/Header';
+import ParticlesBg from '../components/ParticlesBg';
 
 const About = () => {
     return (
         <AppShell header={{ height: 60 }} padding="md">
             <Header />
-            <AppShell.Main>
+            <ParticlesBg />
+            <AppShell.Main style={{ 
+                backgroundColor: 'transparent',
+                backdropFilter: 'blur(3px)',
+            }}>
                 <div className="container fade-in">
                     <h1>About Me</h1>
                     <p>
