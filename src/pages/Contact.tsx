@@ -7,7 +7,7 @@ const Contact = () => {
         <AppShell header={{ height: 60 }} padding="md">
             <Header />
             <AppShell.Main>
-                <div className="container">
+                <div className="container fade-in">
                     <h2>Let's Connect 👇</h2>
                     <p>
                         Feel free to reach out to me through any of the platforms below:

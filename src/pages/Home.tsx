@@ -1,12 +1,16 @@
 import { AppShell } from '@mantine/core';
 import Header from '../components/Header';
+import ParticlesBg from '../components/ParticlesBg';
 
 const Home = () => {
+    console.log('Home component loaded'); // ✅ Debug check
+    
     return (
         <AppShell header={{ height: 60 }} padding="md">
             <Header />
-            <AppShell.Main>
-                <div className="container">
+            <AppShell.Main style={{ position: 'relative', overflow: 'hidden' }}>
+                <ParticlesBg />
+                <div className="container fade-in">
                     <div className="hero">
                         <h1>Hi, I'm Vincentius Kosasih 👋</h1>
                         <p>

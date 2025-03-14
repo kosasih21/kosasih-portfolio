@@ -65,7 +65,7 @@ const Projects = () => {
                     overflowX: 'visible',
                 }}
             >
-                <div className="container">
+                <div className="projects-container fade-in">
                     <h1>My Projects 🚀</h1>
                     <p className="subheading">
                         Here are some of the key projects I've worked on:

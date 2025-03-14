@@ -4,4 +4,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [react()],
     base: '/',
+    resolve: {
+        alias: {
+            '@': '/src',
+            '@tsparticles/shape-text': 'node_modules/@tsparticles/shape-text',
+        }
+    },
 });

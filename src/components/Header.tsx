@@ -2,7 +2,11 @@ import { AppShell, Button } from '@mantine/core';
 
 const Header = () => {
     return (
-        <AppShell.Header style={{ borderBottom: '1px solid #333333' }}>
+        <AppShell.Header style={{ 
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)', 
+            backgroundColor: 'transparent',
+            backdropFilter: 'blur(5px)', // Optional for a frosted glass effect
+        }}>
             <div className="header">
                 <div className="header-buttons">
                     <Button
@@ -10,7 +14,10 @@ const Header = () => {
                         component="a"
                         href="/"
                         className="nav-button"
-                        style={{ color: '#1DB954' }}
+                        style={{
+                            color: '#1DB954',
+                            '--button-hover': '#1f271f',
+                        }}
                     >
                         Home
                     </Button>
@@ -19,7 +26,10 @@ const Header = () => {
                         component="a"
                         href="/about"
                         className="nav-button"
-                        style={{ color: '#1DB954' }}
+                        style={{
+                            color: '#1DB954',
+                            '--button-hover': '#1f271f',
+                        }}
                     >
                         About
                     </Button>
@@ -28,7 +38,10 @@ const Header = () => {
                         component="a"
                         href="/projects"
                         className="nav-button"
-                        style={{ color: '#1DB954' }}
+                        style={{
+                            color: '#1DB954',
+                            '--button-hover': '#1f271f',
+                        }}
                     >
                         Projects
                     </Button>
@@ -37,7 +50,10 @@ const Header = () => {
                         component="a"
                         href="/contact"
                         className="nav-button"
-                        style={{ color: '#1DB954' }}
+                        style={{
+                            color: '#1DB954',
+                            '--button-hover': '#1f271f',
+                        }}
                     >
                         Contact
                     </Button>
