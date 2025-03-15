@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import {Particles, initParticlesEngine} from '@tsparticles/react';
 import {
     type Container,
@@ -107,4 +107,4 @@ const ParticlesBg = () => {
     }
 };
 
-export default ParticlesBg;
+export default memo(ParticlesBg);

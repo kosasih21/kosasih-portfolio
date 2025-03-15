@@ -25,7 +25,7 @@
 
 
 html, body, #root, .mantine-AppShell-main {
-    height: 100%;
+    height: auto !important; /* ✅ Allow the parent to expand naturally */
     width: 100vw;
     overflow-x: hidden;
     background-color: #121212;
@@ -112,9 +112,6 @@ a {
     border: none;
 }
 
-.nav-button:hover {
-    background-color: #333333;
-}
 
 
 
@@ -322,4 +319,62 @@ a {
 .custom-menu-item:hover {
     background-color: #0B3319;
     color: #121212;
+}
+
+/* Tag styling */
+.tag {
+    background-color: #1DB954 !important; /* ✅ Background color */
+    color: #121212 !important; /* ✅ Text color */
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #1ed760 !important; /* ✅ Lighter green on hover */
+    color: #121212 !important;
+}
+
+
+/* Typewriter effect for the header */
+.typing-demo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 12px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #1DB954;
+    padding-right: 4px;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #1DB954 }
+}
+
+
+
+/* Typewriter effect for dynamic text */
+.dynamic-typing {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1DB954;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #1DB954;
+    padding-right: 4px;
+    animation: blink 0.7s step-end infinite;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -27,20 +27,30 @@
         box-sizing: border-box;
       }
 
-      body {
+      /* Allow height to adjust based on content */
+      html, body {
         font-family: 'Inter', sans-serif;
         background-color: #f4f4f9;
         color: #333;
         margin: 0;
         padding: 0;
         line-height: 1.6;
+        width: 100%;
+        min-height: 100vh; /* ✅ Use min-height instead of height */
+        overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+        overflow: auto;
+        height: max-content;
       }
 
       #root {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        width: 100%;
+        min-height: 100vh; /* ✅ Expand based on content */
+        overflow-x: hidden; /* ✅ Ensure horizontal scrolling is off */
+        overflow: auto; /* ✅ Allow vertical scrolling */
+        height: max-content;
       }
     </style>
   </head>

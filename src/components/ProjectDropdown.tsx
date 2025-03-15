@@ -10,16 +10,16 @@ const ProjectDropdown = () => {
             closeDelay={200}
             styles={{
                 dropdown: {
-                    backgroundColor: '#121212', // ✅ Background color of dropdown
-                    border: '1px solid #125429', // ✅ Border color
+                    backgroundColor: '#121212',
+                    border: '1px solid #125429',
                     padding: '8px',
                     borderRadius: '8px',
                 },
                 item: {
-                    color: '#E0E0E0', // ✅ Text color
+                    color: '#E0E0E0',
                 },
                 label: {
-                    color: '#1DB954', // ✅ Label text color
+                    color: '#1DB954',
                     fontWeight: 600,
                 }
             }}
@@ -28,10 +28,18 @@ const ProjectDropdown = () => {
                 <Menu.Target>
                     <Button 
                         variant="subtle" 
-                        style={{ 
-                            color: '#1DB954', 
+                        style={{
+                            color: '#1DB954',
                             backgroundColor: 'transparent',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            transition: 'background-color 0.3s',
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = '#1f271f';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'transparent';
+                            e.currentTarget.style.color = '#1DB954';
                         }}
                     >
                         Projects
@@ -46,7 +54,7 @@ const ProjectDropdown = () => {
                     href="/projects/self-driving-car"
                     className="custom-menu-item"
                 >
-                    Self-Driving Car
+                    Mini Self-Driving Car
                 </Menu.Item>
                 <Menu.Item
                     component="a"
