@@ -1,13 +1,9 @@
 import { AppShell, Button } from '@mantine/core';
 import { Github, Linkedin, Mail } from 'lucide-react';
-// import Header from '../components/Header';
-// import ParticlesBg from '../components/ParticlesBg';
 
 const Contact = () => {
     return (
         <AppShell header={{ height: 60 }} padding="md">
-            {/* <Header />
-            <ParticlesBg /> */}
             <AppShell.Main style={{ 
                 backgroundColor: 'transparent',
                 backdropFilter: 'blur(3px)',

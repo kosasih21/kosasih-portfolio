@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { AppShell } from '@mantine/core';
-// import Header from '../components/Header';
-// import ParticlesBg from '../components/ParticlesBg';
 
 const descriptions = [
     "Vincentius Kosasih :D",
@@ -59,8 +57,6 @@ const Home = () => {
 
     return (
         <AppShell header={{ height: 60 }} padding="md">
-            {/* <Header />
-            <ParticlesBg /> */}
             <AppShell.Main style={{ 
                 backgroundColor: 'transparent',
                 position: 'relative',
