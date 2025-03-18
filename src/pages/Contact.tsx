@@ -36,7 +36,7 @@ const Contact = () => {
                         </Button>
                         <Button
                             component="a"
-                            href="mailto:vincentius.kosasih@example.com"
+                            href="mailto:kosasih21103@gmail.com"
                             leftSection={<Mail size={18} />}
                             className="connect-button"
                         >

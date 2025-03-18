@@ -48,7 +48,6 @@ const ProjectDropdown = () => {
             </a>
 
             <Menu.Dropdown>
-                <Menu.Label>My Projects</Menu.Label>
                 <Menu.Item
                     component="a"
                     href="/projects/self-driving-car"

@@ -30,7 +30,7 @@ const ParticlesBg = () => {
                 id="tsparticles"
                 particlesLoaded={particlesLoaded}
                 style={{
-                    position: 'absolute', // ✅ Dynamic height based on parent container
+                    position: 'absolute',
                     width: '100%',
                     height: '100%',
                     top: 0,

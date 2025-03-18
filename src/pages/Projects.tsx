@@ -64,7 +64,7 @@ const Projects = () => {
                     backdropFilter: 'blur(3px)',
                 }}
             >
-                <div className="projects-container fade-in">
+                <div className="project-container fade-in">
                     <h1>My Projects 🚀</h1>
                     <p className="subheading">
                         Here are some of the key projects I've worked on:

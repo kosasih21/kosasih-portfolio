@@ -9,7 +9,7 @@ const descriptions = [
     "focused in embedded systems",
     "a volleyball player",
     "a Jesus follower",
-    "looking forward to meeting you",
+    "looking forward to meeting you!",
 ];
 
 const Home = () => {
@@ -20,10 +20,10 @@ const Home = () => {
     const [index, setIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
-    const typingSpeed = 100;
-    const deletingSpeed = 75;
+    const typingSpeed = 75;
+    const deletingSpeed = 40;
     const pauseTime = 2000;
-    const initialPauseTime = 3500;
+    const initialPauseTime = 3000;
 
     useEffect(() => {
         let typingTimeout: NodeJS.Timeout;
