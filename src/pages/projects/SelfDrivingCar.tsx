@@ -1,4 +1,5 @@
-import { AppShell, Blockquote } from '@mantine/core';
+import { AppShell, Blockquote, Grid } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 
 const SelfDrivingCar = () => {
     return (
@@ -28,6 +29,39 @@ const SelfDrivingCar = () => {
                     </Blockquote>
 
 
+                    <Grid gutter="xl" style={{ marginTop: '48px' }}>
+                        {/* Left Side */}
+                        <Grid.Col span={6}> {/* ✅ Increased the span to give more space */}
+                            <Text className="about-text">
+                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
+                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
+                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
+                                integrating hardware with software.  
+                                <br />
+                                <br />
+                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                            </Text>
+                        </Grid.Col>
+
+                        {/* Right Side */}
+                        <Grid.Col span={6}>
+                            <Carousel
+                                withIndicators
+                                height={400}
+                                slideSize="100%"
+                                slideGap="md"
+                                loop
+                                align="center"
+                                styles={{
+                                    control: {
+                                        backgroundColor: '#1DB954',
+                                    },
+                                }}
+                            >
+                                {slides}
+                            </Carousel>
+                        </Grid.Col>
+                    </Grid>
 
 
                     <h2>Technical Details</h2>

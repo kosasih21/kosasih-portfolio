@@ -196,6 +196,87 @@ a {
     overflow-y: unset !important;
 }
 
+/* About Page Specific Styling */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #E0E0E0;
+    text-align: left;
+}
+
+.large-text {
+    font-size: 1.5rem; /* ✅ Bigger font size */
+    line-height: 2;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 400px; /* ✅ Larger height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section-divider {
+    margin: 24px 0;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1DB954;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.section-divider {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin: 32px 0;
+}
+
+.about-text {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #E0E0E0 !important;
+    text-align: left !important;
+    line-height: 1.8 !important;
+}
+
+:where(.experience-title) {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-top: 12px !important;
+    color: #ffffff !important;
+    text-align: left !important;
+}
+
+:where(.experience-subtitle) {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #cccccc !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+}
+
+/* Carousel Styling */
+.carousel-image {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+
 
 
 .project-container {
