@@ -3,7 +3,7 @@ import { AppShell } from '@mantine/core';
 
 const descriptions = [
     "Vincentius Kosasih :D",
-    "GT alumni",
+    "GT alum",
     "graduating class of 2025",
     "a CompE major",
     "focused in embedded systems",
@@ -70,10 +70,10 @@ const Home = () => {
                                 <span>{text}</span>
                             </h1>
                         </div>
-                        <p className="non-clickable">
+                        <h3 className="non-clickable">
                             I'm a software developer passionate about embedded systems, React, Python, and full stack development.
                             I love combining hardware and software to build efficient and scalable solutions with real-world applications.
-                        </p>
+                        </h3>
                         <div className="link-container">
                             <a href="/projects" className="button">
                                 View My Projects

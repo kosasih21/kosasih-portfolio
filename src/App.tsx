@@ -26,11 +26,11 @@ import ParticlesBg from './components/ParticlesBg';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import SelfDrivingCar from './pages/projects/SelfDrivingCar';
-// import PhotoGallery from './pages/projects/PhotoGallery';
-// import Portfolio from './pages/projects/Portfolio';
-// import FpgaHFT from './pages/projects/FpgaHFT';
-// import ArrowDetection from './pages/projects/ArrowDetection';
-// import Game from './pages/projects/Game';
+import PhotoGallery from './pages/projects/PhotoGallery';
+import Portfolio from './pages/projects/Portfolio';
+import FpgaHFT from './pages/projects/FpgaHFT';
+import ArrowDetection from './pages/projects/ArrowDetection';
+import Game from './pages/projects/Game';
 import Contact from './pages/Contact';
 import About from './pages/About';
 
@@ -62,11 +62,11 @@ const App: React.FC = () => {
                     <Route path="/projects" element={<Projects />} />
 
                     <Route path="/projects/self-driving-car" element={<SelfDrivingCar />}/>
-                    {/* <Route path="/projects/photo-gallery" element={<PhotoGallery />}/>
+                    <Route path="/projects/photo-gallery" element={<PhotoGallery />}/>
                     <Route path="/projects/portfolio" element={<Portfolio />}/>
                     <Route path="/projects/fpga-hft" element={<FpgaHFT />}/>
                     <Route path="/projects/arrow-detection" element={<ArrowDetection />}/>
-                    <Route path="/projects/game" element={<Game />}/> */}
+                    <Route path="/projects/game" element={<Game />}/>
 
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/about" element={<About />} />

@@ -8,9 +8,10 @@
 
 
 html, body, #root, .mantine-AppShell-main {
-    height: auto !important; /* ✅ Allow the parent to expand naturally */
+    height: auto !important;
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: auto;
     background-color: #121212;
     color: #E0E0E0;
     font-family: 'Inter', sans-serif;
@@ -30,6 +31,18 @@ html, body, #root, .mantine-AppShell-main {
 h1, h2, h3, p {
     margin-bottom: 16px;
     text-align: center;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #E0E0E0;
+    text-align: left;
+    line-height: 1.8;
 }
 
 h1:last-child,
@@ -205,10 +218,11 @@ a {
 }
 
 .about-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #E0E0E0;
-    text-align: left;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #E0E0E0 !important;
+    text-align: left !important;
+    line-height: 1.8 !important;
 }
 
 .large-text {
@@ -218,7 +232,7 @@ a {
 
 .carousel-image {
     width: 100%;
-    height: 400px; /* ✅ Larger height */
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -242,15 +256,7 @@ a {
     margin: 32px 0;
 }
 
-.about-text {
-    font-size: 1rem !important;
-    font-weight: 400 !important;
-    color: #E0E0E0 !important;
-    text-align: left !important;
-    line-height: 1.8 !important;
-}
-
-:where(.experience-title) {
+:where(.custom-title) {
     font-size: 1.25rem !important;
     font-weight: 600 !important;
     margin-top: 12px !important;
@@ -258,7 +264,7 @@ a {
     text-align: left !important;
 }
 
-:where(.experience-subtitle) {
+:where(.custom-subtitle) {
     font-size: 1rem !important;
     font-weight: 400 !important;
     color: #cccccc !important;
@@ -454,6 +460,27 @@ a {
     animation: fadeIn 1s ease-out forwards;
 }
 
+@keyframes fadeInView {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-view {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-view.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 /* Typewriter effect for the header */

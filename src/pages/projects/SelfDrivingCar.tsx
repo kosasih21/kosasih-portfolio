@@ -1,7 +1,29 @@
-import { AppShell, Blockquote, Grid } from '@mantine/core';
+import { useEffect } from 'react';
+import { AppShell, Grid, Text, Image } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
+import '@mantine/carousel/styles.css';
+import { initScrollAnimation } from '../../utils/scrollAnimation';
+
+
+const images = [
+    'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
+    'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png',
+    'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png',
+    'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
+    'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png',
+];
 
 const SelfDrivingCar = () => {
+    const slides = images.map((url) => (
+        <Carousel.Slide key={url}>
+            <Image src={url} className="carousel-image" />
+        </Carousel.Slide>
+    ));
+
+    useEffect(() => {
+        initScrollAnimation();
+    }, []);
+
     return (
         <AppShell header={{ height: 60 }} padding="md">
             <AppShell.Main style={{ 
@@ -14,25 +36,12 @@ const SelfDrivingCar = () => {
                         Contributors: Vincentius Kosasih, George Lee @LinkedIn
                     </p>
 
-                    <h2>Project Overview</h2>
-                    <p>
-                        Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.
-                        I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering (Devices & Distributed Systems, Software Design)
-                        I envision working in a high performing, fast-paced environment where I will learn and provide technical expertise integrating hardware
-                        with software. Check out my experience and education below, or visit my projects page to see what I work on as a passion.
-                    </p>
-                    
-                    <Blockquote color="green" cite="– Master Oogway">
-                        "Yesterday is history, tomorrow is a mystery,
-                        but today is a gift,
-                        that is why it is called the present."
-                    </Blockquote>
 
-
-                    <Grid gutter="xl" style={{ marginTop: '48px' }}>
+                    <Grid gutter="xl" style={{ marginTop: '32px' }}>
                         {/* Left Side */}
-                        <Grid.Col span={6}> {/* ✅ Increased the span to give more space */}
-                            <Text className="about-text">
+                        <Grid.Col span={6}>
+                            <h2 className="fade-in-view">Project Overview</h2>
+                            <Text className="about-text fade-in-view">
                                 Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
                                 I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
                                 I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
@@ -57,6 +66,7 @@ const SelfDrivingCar = () => {
                                         backgroundColor: '#1DB954',
                                     },
                                 }}
+                                className="fade-in-view"
                             >
                                 {slides}
                             </Carousel>
@@ -64,9 +74,9 @@ const SelfDrivingCar = () => {
                     </Grid>
 
 
-                    <h2>Technical Details</h2>
-                    <p>Key Skills: C++, Arduino, Embedded Systems</p>
-                    <p>
+                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Technical Details</h2>
+                    <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
+                    <p className="fade-in-view">
                         •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 
                             Center Aircraft Division, participating in over 50 sprint meetings and streamlining task coordination.
                         •	Played a key role in developing a full stack data application for electronic warfare, working on the front-end with React.js and the 
@@ -77,9 +87,9 @@ const SelfDrivingCar = () => {
                             and suggesting improvements that enhanced code maintainability and decreased overall technical debt.
                     </p>
 
-                    <h2>Challenges and Insights</h2>
-                    <p>Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
-                    <p>
+                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
+                    <p className="fade-in-view">Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
+                    <p className="fade-in-view">
                         •	Spearheaded Agile sprint initiatives, documenting over 50 software QA processes and iterating test scenarios, leading to the 
                         identification and resolution of key software points, improving building management software performance by 20%.
                         • 	Performed data-driven analysis on building management software benchmarks, isolating critical performance bottlenecks within internal 
@@ -90,7 +100,7 @@ const SelfDrivingCar = () => {
                         successfully securing over $10 million in funding and strategic backing to drive the project's success.
                     </p>
 
-                    <div className="link-container">
+                    <div className="link-container fade-in-view">
                         <a href="/contact" className="secondary-button">
                              Learn More
                         </a>
