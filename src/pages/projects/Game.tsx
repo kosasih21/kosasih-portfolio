@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AppShell, Grid, Text, Image } from '@mantine/core';
+import { AppShell, Grid, Text, Image, Divider } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import { initScrollAnimation } from '../../utils/scrollAnimation';
@@ -36,6 +36,7 @@ const Game = () => {
                         Contributors: Vincentius Kosasih
                     </p>
 
+                    <Divider style={{ borderColor: 'rgba(255, 255, 255, 0.08)', marginTop: '32px' }} className="section-divider" />
 
                     <Grid gutter="xl" style={{ marginTop: '32px' }}>
                         {/* Left Side */}
@@ -74,7 +75,7 @@ const Game = () => {
                     </Grid>
 
 
-                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Technical Details</h2>
+                    <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
                     <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
                     <p className="fade-in-view">
                         •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 

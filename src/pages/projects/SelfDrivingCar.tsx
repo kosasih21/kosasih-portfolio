@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AppShell, Grid, Text, Image } from '@mantine/core';
+import { AppShell, Grid, Text, Image, Divider } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import { initScrollAnimation } from '../../utils/scrollAnimation';
@@ -36,6 +36,7 @@ const SelfDrivingCar = () => {
                         Contributors: Vincentius Kosasih, George Lee @LinkedIn
                     </p>
 
+                    <Divider style={{ borderColor: 'rgba(255, 255, 255, 0.08)', marginTop: '32px' }} className="section-divider" />
 
                     <Grid gutter="xl" style={{ marginTop: '32px' }}>
                         {/* Left Side */}
@@ -74,30 +75,35 @@ const SelfDrivingCar = () => {
                     </Grid>
 
 
-                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Technical Details</h2>
-                    <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
+                    <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
+                    <p className="fade-in-view"><strong>Key Skills:</strong> C++, Arduino, Embedded Systems, Obstacle Detection, Motor Control</p>
                     <p className="fade-in-view">
-                        •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 
-                            Center Aircraft Division, participating in over 50 sprint meetings and streamlining task coordination.
-                        •	Played a key role in developing a full stack data application for electronic warfare, working on the front-end with React.js and the 
-                            back end with REST API Integrations, leading to a 25% increase in responsiveness and performance improvements.
-                        •	Developed and executed 100+ unit test cases to ensure project functionality, reliability, and security, which resulted in identifying 
-                            and resolving critical software issues early, decreasing overall bug count and test coverage by over 20%.
-                        •	Engaged in all phases of development, from planning and design to implementation and review, contributing to over 30 code reviews 
-                            and suggesting improvements that enhanced code maintainability and decreased overall technical debt.
+                        • Utilized three HC-SR04 ultrasonic sensors (front, left, right) to detect surrounding obstacles in real time. Sensor data was collected via `pulseIn` timing functions and converted into distance measurements in centimeters. <br />
+                        • Implemented a control loop using basic `if-else` logic to determine navigation behavior based on proximity readings. The system prioritizes forward motion unless the front is obstructed. <br />
+                        • Designed modular motor control functions (`spinMotorsForward`, `moveBackward`, `turnLeft`, `turnRight`, `stopMotors`) for readability and easy tuning of motion behavior. <br />
+                        • Used GPIO pins on the Arduino Uno to control a differential drive configuration, directing left and right motors through H-bridge logic signals. <br />
+                        • Included safety and stability via delays and motor stop conditions to avoid erratic behavior between state transitions.
                     </p>
 
+
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
-                    <p className="fade-in-view">Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
+                    <p className="fade-in-view"><strong>Key Concepts:</strong> Hardware Calibration, Response Timing, Simplicity in Control Logic</p>
                     <p className="fade-in-view">
-                        •	Spearheaded Agile sprint initiatives, documenting over 50 software QA processes and iterating test scenarios, leading to the 
-                        identification and resolution of key software points, improving building management software performance by 20%.
-                        • 	Performed data-driven analysis on building management software benchmarks, isolating critical performance bottlenecks within internal 
-                        data structures and algorithms and formulating optimization strategies according to project roadmaps.
-                        • 	Analyzed complex customer feedback on product performance and product lifecycle, transforming it into 30+ precise technical requirements 
-                        that guided strategic product improvements, leading to a project revival.
-                        • 	Garnered strong support from senior executives and vice presidents by presenting a compelling case for a high-impact project initiative, 
-                        successfully securing over $10 million in funding and strategic backing to drive the project's success.
+                        • One of the major challenges was ensuring consistent sensor readings, especially when dealing with reflections and noise from nearby objects. This required calibrating trigger and echo timing and validating sensor placement for optimal coverage. <br />
+                        • Balancing responsiveness with stability involved fine-tuning `delay()` durations to reduce jitter while maintaining reactivity to sudden obstacles. <br />
+                        • Keeping the logic simple yet effective led to an emphasis on modular function design. Breaking up motion behavior into isolated units not only improved testability but also made debugging straightforward. <br />
+                        • Managing a basic robot without any feedback loop (e.g., no encoders or PID) reinforced the importance of environmental awareness through sensing alone, pushing for clever fallback behaviors like reversing and retesting after failed turns. <br />
+                        • This project emphasized the value of building foundational control systems before implementing more complex autonomy features like mapping or path planning.
+                    </p>
+
+
+                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Potential Extensions</h2>
+                    <p className="fade-in-view"><strong>Next Steps:</strong> Feedback Control, Smarter Navigation, and Better Testing</p>
+                    <p className="fade-in-view">
+                        • I would integrate wheel encoders and implement a basic PID control loop to give the robot feedback on its movement, enabling smoother turns and more reliable straight-line motion. <br />
+                        • For more intelligent obstacle avoidance, I’d implement a mapping or memory system—using either a grid or occupancy map—so the robot could recognize repeated obstacles and reroute more strategically. <br />
+                        • I would also replace `delay()` with non-blocking timers using `millis()` to improve responsiveness and allow for sensor multitasking. This would open the door to more reactive and scalable behavior. <br />
+                        • Finally, I'd expand testing conditions: using tighter corridors, variable lighting, and floor materials to expose the robot to real-world inconsistencies and make the control logic more robust.
                     </p>
 
                     <div className="link-container fade-in-view">

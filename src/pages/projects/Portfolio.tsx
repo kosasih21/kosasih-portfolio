@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AppShell, Grid, Text, Image } from '@mantine/core';
+import { AppShell, Grid, Text, Image, Divider } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import { initScrollAnimation } from '../../utils/scrollAnimation';
@@ -36,6 +36,7 @@ const Portfolio = () => {
                         Contributors: Vincentius Kosasih
                     </p>
 
+                    <Divider style={{ borderColor: 'rgba(255, 255, 255, 0.08)', marginTop: '32px' }} className="section-divider" />
 
                     <Grid gutter="xl" style={{ marginTop: '32px' }}>
                         {/* Left Side */}
@@ -74,30 +75,31 @@ const Portfolio = () => {
                     </Grid>
 
 
-                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Technical Details</h2>
-                    <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
+                    <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
+                    <p className="fade-in-view">Key Skills: React.js, TypeScript, Mantine UI, CSS Animations, Responsive Design, GitHub Pages</p>
                     <p className="fade-in-view">
-                        •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 
-                            Center Aircraft Division, participating in over 50 sprint meetings and streamlining task coordination.
-                        •	Played a key role in developing a full stack data application for electronic warfare, working on the front-end with React.js and the 
-                            back end with REST API Integrations, leading to a 25% increase in responsiveness and performance improvements.
-                        •	Developed and executed 100+ unit test cases to ensure project functionality, reliability, and security, which resulted in identifying 
-                            and resolving critical software issues early, decreasing overall bug count and test coverage by over 20%.
-                        •	Engaged in all phases of development, from planning and design to implementation and review, contributing to over 30 code reviews 
-                            and suggesting improvements that enhanced code maintainability and decreased overall technical debt.
+                    • Designed and developed a sleek, responsive portfolio website using React with TypeScript and Mantine’s AppShell for layout and theming.  
+                    • Implemented a consistent dark theme across pages, with shared header navigation, project carousels, animated transitions, and modern grid layouts.  
+                    • Integrated scroll-based and in-view animations using `IntersectionObserver` and custom CSS to enhance interactivity and showcase smooth page transitions.  
+                    • Deployed using GitHub Pages with a lightweight, statically hosted setup to ensure fast performance and low maintenance.  
+                    • Organized project pages with reusable sections (hero, overview, technical details, challenges, etc.), optimized for readability and storytelling.  
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
-                    <p className="fade-in-view">Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
+                    <p className="fade-in-view">Scroll Animations, Theming Consistency, and Dynamic Layout Scaling</p>
                     <p className="fade-in-view">
-                        •	Spearheaded Agile sprint initiatives, documenting over 50 software QA processes and iterating test scenarios, leading to the 
-                        identification and resolution of key software points, improving building management software performance by 20%.
-                        • 	Performed data-driven analysis on building management software benchmarks, isolating critical performance bottlenecks within internal 
-                        data structures and algorithms and formulating optimization strategies according to project roadmaps.
-                        • 	Analyzed complex customer feedback on product performance and product lifecycle, transforming it into 30+ precise technical requirements 
-                        that guided strategic product improvements, leading to a project revival.
-                        • 	Garnered strong support from senior executives and vice presidents by presenting a compelling case for a high-impact project initiative, 
-                        successfully securing over $10 million in funding and strategic backing to drive the project's success.
+                    • One challenge was getting animations to trigger only when elements entered the viewport—solved using a clean `IntersectionObserver`-based approach for `fade-in-view` class elements.  
+                    • Balancing responsive layout with full-bleed design elements and custom breakpoints required iterative tuning using Mantine’s Grid and native CSS units.  
+                    • Ensured styling consistency across the app by centralizing theme colors, font sizes, spacing, and animation durations in global CSS and keeping logic out of component files.  
+                    • Handling z-index layers and backdrop blur effects across `AppShell` and content layers taught key lessons in how layered UI rendering behaves in Mantine.  
+                    </p>
+
+                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Potential Extensions</h2>
+                    <p className="fade-in-view">
+                    • I would add a lightweight content management system (CMS) or a markdown-powered backend to let me update projects without touching code.  
+                    • I’d also introduce a contact form backed by an API or serverless function (e.g., AWS Lambda or Formspree) for handling secure user submissions.  
+                    • Animating page transitions with Framer Motion and adding filtering/search capabilities to the projects section would enhance interactivity.  
+                    • Lastly, I'd optimize accessibility (ARIA, keyboard nav, contrast) and SEO (structured data, meta tags) to make the site more discoverable and inclusive.  
                     </p>
 
                     <div className="link-container fade-in-view">

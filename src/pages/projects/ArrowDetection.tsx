@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AppShell, Grid, Text, Image } from '@mantine/core';
+import { AppShell, Grid, Text, Image, Divider } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import { initScrollAnimation } from '../../utils/scrollAnimation';
@@ -36,6 +36,7 @@ const ArrowDetection = () => {
                         Contributors: Vincentius Kosasih, Justin Ayiih @LinkedIn, George Lee @LinkedIn
                     </p>
 
+                    <Divider style={{ borderColor: 'rgba(255, 255, 255, 0.08)', marginTop: '32px' }} className="section-divider" />
 
                     <Grid gutter="xl" style={{ marginTop: '32px' }}>
                         {/* Left Side */}
@@ -74,30 +75,33 @@ const ArrowDetection = () => {
                     </Grid>
 
 
-                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Technical Details</h2>
-                    <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
+                    <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
+                    <p className="fade-in-view">Key Skills: Arduino, VL53L0X Sensors, C++, Weighted Averaging, Sensor Fusion</p>
                     <p className="fade-in-view">
-                        •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 
-                            Center Aircraft Division, participating in over 50 sprint meetings and streamlining task coordination.
-                        •	Played a key role in developing a full stack data application for electronic warfare, working on the front-end with React.js and the 
-                            back end with REST API Integrations, leading to a 25% increase in responsiveness and performance improvements.
-                        •	Developed and executed 100+ unit test cases to ensure project functionality, reliability, and security, which resulted in identifying 
-                            and resolving critical software issues early, decreasing overall bug count and test coverage by over 20%.
-                        •	Engaged in all phases of development, from planning and design to implementation and review, contributing to over 30 code reviews 
-                            and suggesting improvements that enhanced code maintainability and decreased overall technical debt.
+                        • Initialized four VL53L0X time-of-flight sensors via I2C using dynamic address reassignment and sequential boot-up via shutdown pins to avoid address conflicts. <br />
+                        • Mapped each sensor's physical position around a circular arrow board (at 0°, 45°, 90°, and 135°) and stored their readings in a structured array for spatial referencing. <br />
+                        • Implemented a weighted averaging algorithm that uses the inverse of the sensor readings to estimate the arrow’s landing point with positional smoothing. <br />
+                        • Calculated the distance from a manually calibrated center offset and translated it into a scoring system resembling real-world archery. <br />
+                        • All code was optimized for loop timing and modularity to support potential future upgrades such as real-time display or Bluetooth transmission.
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
-                    <p className="fade-in-view">Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
+                    <p className="fade-in-view">Sensor Synchronization, Accuracy Tradeoffs, and Geometric Complexity</p>
                     <p className="fade-in-view">
-                        •	Spearheaded Agile sprint initiatives, documenting over 50 software QA processes and iterating test scenarios, leading to the 
-                        identification and resolution of key software points, improving building management software performance by 20%.
-                        • 	Performed data-driven analysis on building management software benchmarks, isolating critical performance bottlenecks within internal 
-                        data structures and algorithms and formulating optimization strategies according to project roadmaps.
-                        • 	Analyzed complex customer feedback on product performance and product lifecycle, transforming it into 30+ precise technical requirements 
-                        that guided strategic product improvements, leading to a project revival.
-                        • 	Garnered strong support from senior executives and vice presidents by presenting a compelling case for a high-impact project initiative, 
-                        successfully securing over $10 million in funding and strategic backing to drive the project's success.
+                        • Coordinating four identical I2C sensors posed challenges due to address conflicts—solved through staggered powering and unique address assignments with `begin(address)`. <br />
+                        • Sensor reflections near board edges introduced false positives, requiring manual subtraction of offset noise and limiting the valid distance range. <br />
+                        • Geometric positioning of sensors was not perfectly symmetrical in practice, demanding both calibration and compensation logic for weighted averaging to be accurate. <br />
+                        • The use of weighted average instead of triangulation was a practical simplification but highlighted limitations in precision due to the relatively low angular coverage (only 4 sensors). <br />
+                        • Debugging was made easier by structured console outputs, but tuning the smoothing factor and calibration constants still required iterative testing.
+                    </p>
+
+                    <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Potential Extensions</h2>
+                    <p className="fade-in-view">
+                        • I would expand the system to 8 or 12 VL53L0X sensors placed at finer angles (e.g., every 30°) to significantly increase resolution and reduce directional blind spots. <br />
+                        • A simple graphical interface could visualize the arrow’s estimated landing location on a web dashboard or LCD screen, useful for debugging and demos. <br />
+                        • I'd also introduce automatic calibration routines, where the system adjusts its center offset and noise filters based on observed sensor behavior during a warm-up period. <br />
+                        • Eventually, I would consider replacing the inverse weighting method with true multilateration or sensor fusion techniques for greater physical accuracy. <br />
+                        • Integrating data logging or wireless communication would help with long-term analysis and performance tracking over multiple sessions.
                     </p>
 
                     <div className="link-container fade-in-view">
