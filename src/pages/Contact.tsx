@@ -1,4 +1,4 @@
-import { AppShell, Button } from '@mantine/core';
+import { AppShell, Button, CopyButton, Tooltip} from '@mantine/core';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Contact = () => {
@@ -34,14 +34,31 @@ const Contact = () => {
                         >
                             LinkedIn
                         </Button>
-                        <Button
+                        {/* <Button
                             component="a"
                             href="mailto:kosasih21103@gmail.com"
                             leftSection={<Mail size={18} />}
                             className="connect-button"
                         >
                             Email
-                        </Button>
+                        </Button> */}
+                        <CopyButton value="kosasih21103@gmail.com" timeout={2000}>
+                            {({ copied, copy }) => (
+                                <Tooltip
+                                    label={copied ? "Copied!" : "Click to copy email"}
+                                    withArrow
+                                    position="right"
+                                >
+                                    <Button
+                                        onClick={copy}
+                                        leftSection={<Mail size={18} />}
+                                        className="connect-button"
+                                    >
+                                        Email
+                                    </Button>
+                                </Tooltip>
+                            )}
+                        </CopyButton>
                     </div>
                 </div>
             </AppShell.Main>
