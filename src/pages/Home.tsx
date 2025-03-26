@@ -19,6 +19,7 @@ const Home = () => {
     const [text, setText] = useState('');
     const [index, setIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+    const [isPrefixTyped, setIsPrefixTyped] = useState(false);
 
     const typingSpeed = 75;
     const deletingSpeed = 40;
@@ -27,33 +28,39 @@ const Home = () => {
 
     useEffect(() => {
         let typingTimeout: NodeJS.Timeout;
-        const currentDescription = descriptions[index];
 
-        if (isDeleting) {
+        if (!isPrefixTyped) {
             typingTimeout = setTimeout(() => {
-                setText((prev) => prev.slice(0, -1));
-                if (text === '') {
-                    setIsDeleting(false);
-                    setIndex((prev) => (prev + 1) % descriptions.length);
-                }
-            }, deletingSpeed);
-        } else {
-            typingTimeout = setTimeout(() => {
-                setText((prev) => currentDescription.slice(0, prev.length + 1));
-                if (text === currentDescription) {
-                    const holdTime = 
-                        index === 0 || index === descriptions.length - 1 ? initialPauseTime : pauseTime;
-                    
-                    setTimeout(() => setIsDeleting(true), holdTime);
+                setText((prev) => prefix.slice(0, prev.length + 1));
+                if (text === prefix) {
+                    setIsPrefixTyped(true);
                 }
             }, typingSpeed);
+        } else {
+            const currentDescription = descriptions[index];
+            if (isDeleting) {
+                typingTimeout = setTimeout(() => {
+                    setText((prev) => prev.slice(0, -1));
+                    if (text === prefix) {
+                        setIsDeleting(false);
+                        setIndex((prev) => (prev + 1) % descriptions.length);
+                    }
+                }, deletingSpeed);
+            } else {
+                typingTimeout = setTimeout(() => {
+                    setText((prev) => prefix + currentDescription.slice(0, prev.length - prefix.length + 1));
+                    if (text === prefix + currentDescription) {
+                        const holdTime = 
+                            index === 0 || index === descriptions.length - 1 ? initialPauseTime : pauseTime;
+                        
+                        setTimeout(() => setIsDeleting(true), holdTime);
+                    }
+                }, typingSpeed);
+            }
         }
 
         return () => clearTimeout(typingTimeout);
-    }, [text, isDeleting, index]);
-
-
-
+    }, [text, isDeleting, index, isPrefixTyped]);
 
     return (
         <AppShell header={{ height: 60 }} padding="md">
@@ -66,7 +73,6 @@ const Home = () => {
                     <div className="hero">
                         <div className="wrapper">
                             <h1 className="typing-demo non-clickable">
-                                {prefix}
                                 <span>{text}</span>
                             </h1>
                         </div>
