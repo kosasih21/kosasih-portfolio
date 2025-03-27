@@ -54,7 +54,7 @@ const FpgaHFT = () => {
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
                                 <a 
-                                    href="https://github.com/kosasih21/mini-self-driving-car" 
+                                    href="https://github.com/CharlesD1423/FPGA-for-Finance" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="secondary-button"

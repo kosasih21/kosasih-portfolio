@@ -54,7 +54,7 @@ const PhotoGallery = () => {
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
                                 <a 
-                                    href="https://github.com/kosasih21/mini-self-driving-car" 
+                                    href="https://github.com/kosasih21/PhotoGalleryHW2" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="secondary-button"

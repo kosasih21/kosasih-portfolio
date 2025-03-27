@@ -54,7 +54,7 @@ const Portfolio = () => {
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
                                 <a 
-                                    href="https://github.com/kosasih21/mini-self-driving-car" 
+                                    href="https://github.com/kosasih21/kosasih-portfolio" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="secondary-button"

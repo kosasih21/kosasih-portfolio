@@ -54,7 +54,7 @@ const ArrowDetection = () => {
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
                                 <a 
-                                    href="https://github.com/kosasih21/mini-self-driving-car" 
+                                    href="https://github.com/kosasih21/arrow-detection" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="secondary-button"
