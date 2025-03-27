@@ -43,13 +43,9 @@ const ArrowDetection = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                An embedded archery scoring prototype using four VL53L0X time-of-flight sensors mounted around a circular arrow board.  
+                                The system collects distance readings and computes a weighted average to estimate the arrow's impact point and corresponding score.  
+                                This low-cost solution highlights how sensor fusion and geometry can be applied for real-time scoring in sports tech.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>

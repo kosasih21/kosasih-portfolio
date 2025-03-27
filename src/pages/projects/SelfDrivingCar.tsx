@@ -43,13 +43,9 @@ const SelfDrivingCar = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                A compact, Arduino-powered robot car designed to navigate its environment autonomously using ultrasonic sensors.  
+                                The system reads distances from the front, left, and right to determine if it should move forward, turn, or reverse, enabling obstacle detection and avoidance in real time.  
+                                This project emphasizes foundational robotics principles and serves as a stepping stone for more advanced autonomous navigation systems.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>

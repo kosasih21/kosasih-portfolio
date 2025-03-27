@@ -43,13 +43,9 @@ const PhotoGallery = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                A full-stack photo gallery web app with both SQL (MySQL RDS) and NoSQL (DynamoDB) implementations. 
+                                Users can register, verify emails via AWS SES, and manage photo albums with metadata-rich uploads stored on S3. 
+                                Built to compare relational vs. non-relational design while showcasing scalable CRUD operations, AWS integration, and authentication flows.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>

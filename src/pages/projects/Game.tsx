@@ -43,13 +43,9 @@ const Game = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                A 2D fantasy platformer created in under 72 hours for a game jam. Built with Phaser.js, it includes animated sprites, collectible items, enemy logic, and level design.  
+                                The project demonstrates teamwork, time-boxed creativity, and the ability to ship a playable game under tight deadlines.  
+                                It was a fun exploration of pixel art, game mechanics, and responsive keyboard input.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>

@@ -43,13 +43,9 @@ const Portfolio = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                A responsive personal portfolio built using React, TypeScript, Vite, and Mantine UI.  
+                                This project showcases projects, experiences, and contact info with a modern dark-themed layout and smooth scroll animations.  
+                                It's deployed via Cloudflare Pages and custom domain routing, featuring modular components and clean code structure for easy future updates.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>

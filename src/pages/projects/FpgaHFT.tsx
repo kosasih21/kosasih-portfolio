@@ -43,13 +43,11 @@ const FpgaHFT = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                Hi! I'm Vincentius Kosasih, a passionate software developer with experience in embedded systems, product, and full stack development.  
-                                I'm currently a graduating senior at Georgia Tech, where I study Computer Engineering.  
-                                I envision working in a high-performing, fast-paced environment where I will learn and provide technical expertise  
-                                integrating hardware with software.  
-                                <br />
-                                <br />
-                                Check out my experience and education below, or visit my projects page to see what I work on as a passion.
+                                Designed a high-frequency trading (HFT) benchmark that evaluates FPGA-based performance versus traditional CPU implementations in C++. 
+                                The project focused on comparing latency and throughput of streaming vs. batch processing models. 
+                                We processed realistic historical market data and simulated trading conditions to observe real-time behavior under both paradigms. 
+                                Hardware modules were written in Verilog and integrated into a development board, while C++ provided the baseline software model. 
+                                The goal was to investigate how FPGAs could accelerate finance workloads with tighter timing constraints and higher determinism.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
