@@ -51,6 +51,17 @@ const PhotoGallery = () => {
                                 <br />
                                 Check out my experience and education below, or visit my projects page to see what I work on as a passion.
                             </Text>
+
+                            <div className="fade-in-view" style={{ marginTop: '20px' }}>
+                                <a 
+                                    href="https://github.com/kosasih21/mini-self-driving-car" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="secondary-button"
+                                >
+                                    View Code
+                                </a>
+                            </div>
                         </Grid.Col>
 
                         {/* Right Side */}
