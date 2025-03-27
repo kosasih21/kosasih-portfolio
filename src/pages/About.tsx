@@ -72,15 +72,15 @@ const About = () => {
                     {/* GTRI Experience */}
                     <Grid gutter="lg" style={{ marginTop: '32px' }}>
                         {/* Image on the left */}
-                        <Grid.Col span={6}>
+                        <Grid.Col span={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Image 
-                                src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png" 
+                                src="../../assets/gtri.png" 
                                 alt="GTRI" 
                                 radius="md"
                                 className="fade-in-view"
                                 style={{
                                     width: '100%',
-                                    height: '250px',
+                                    height: '300px',
                                     objectFit: 'cover',
                                 }}
                             />
@@ -114,16 +114,16 @@ const About = () => {
                             </Text>
                         </Grid.Col>
                         {/* Image on the right */}
-                        <Grid.Col span={6}>
+                        <Grid.Col span={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Image 
-                                src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png" 
+                                src="../../assets/honeywell.png" 
                                 alt="Honeywell" 
                                 radius="md"
                                 className="fade-in-view"
                                 style={{
                                     width: '100%',
-                                    height: '250px',
-                                    objectFit: 'cover',
+                                    height: '300px',
+                                    fit: 'contain',
                                 }}
                             />
                         </Grid.Col>
