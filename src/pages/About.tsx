@@ -38,14 +38,14 @@ const About = () => {
 
                         {/* Right Side - Single Image */}
                         <Grid.Col span={6}>
-                            <Image
-                                src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png"
-                                alt="Profile"
+                            <Image 
+                                src="../../assets/self.jpg" 
+                                alt="Vincent in SF" 
                                 radius="md"
                                 className="fade-in-view"
                                 style={{
                                     width: '100%',
-                                    height: '300px', // ✅ Set a fixed height
+                                    height: '450px',
                                     objectFit: 'cover',
                                 }}
                             />
