@@ -62,22 +62,17 @@ const ArrowDetection = () => {
 
                         {/* Right Side */}
                         <Grid.Col span={6}>
-                            <Carousel
-                                withIndicators
-                                height={400}
-                                slideSize="100%"
-                                slideGap="md"
-                                loop
-                                align="center"
-                                styles={{
-                                    control: {
-                                        backgroundColor: '#1DB954',
-                                    },
-                                }}
-                                className="fade-in-view"
-                            >
-                                {slides}
-                            </Carousel>
+                            <Image 
+                                    src="../../assets/arrowDemo.jpg" 
+                                    alt="Arrow Detection" 
+                                    radius="md"
+                                    className="fade-in-view"
+                                    style={{
+                                        width: '100%',
+                                        height: '450px',
+                                        objectFit: 'cover',
+                                    }}
+                                />
                         </Grid.Col>
                     </Grid>
 

@@ -62,22 +62,17 @@ const Game = () => {
 
                         {/* Right Side */}
                         <Grid.Col span={6}>
-                            <Carousel
-                                withIndicators
-                                height={400}
-                                slideSize="100%"
-                                slideGap="md"
-                                loop
-                                align="center"
-                                styles={{
-                                    control: {
-                                        backgroundColor: '#1DB954',
-                                    },
-                                }}
+                            <Image 
+                                src="../../assets/gameDemo.png" 
+                                alt="Recording of App" 
+                                radius="md"
                                 className="fade-in-view"
-                            >
-                                {slides}
-                            </Carousel>
+                                style={{
+                                    width: '100%',
+                                    height: '450px',
+                                    objectFit: 'cover',
+                                }}
+                            />
                         </Grid.Col>
                     </Grid>
 
@@ -85,27 +80,13 @@ const Game = () => {
                     <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
                     <p className="fade-in-view">Key Skills: C++, Arduino, Embedded Systems</p>
                     <p className="fade-in-view">
-                        •	Contributed significantly to software development within an Agile/Sprint team on an embedded systems project for the Naval Air Warfare 
-                            Center Aircraft Division, participating in over 50 sprint meetings and streamlining task coordination.
-                        •	Played a key role in developing a full stack data application for electronic warfare, working on the front-end with React.js and the 
-                            back end with REST API Integrations, leading to a 25% increase in responsiveness and performance improvements.
-                        •	Developed and executed 100+ unit test cases to ensure project functionality, reliability, and security, which resulted in identifying 
-                            and resolving critical software issues early, decreasing overall bug count and test coverage by over 20%.
-                        •	Engaged in all phases of development, from planning and design to implementation and review, contributing to over 30 code reviews 
-                            and suggesting improvements that enhanced code maintainability and decreased overall technical debt.
+                        •	Under Construction
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
                     <p className="fade-in-view">Hardware Calibration, Accelerated Delivery, and Complexity Management</p>
                     <p className="fade-in-view">
-                        •	Spearheaded Agile sprint initiatives, documenting over 50 software QA processes and iterating test scenarios, leading to the 
-                        identification and resolution of key software points, improving building management software performance by 20%.
-                        • 	Performed data-driven analysis on building management software benchmarks, isolating critical performance bottlenecks within internal 
-                        data structures and algorithms and formulating optimization strategies according to project roadmaps.
-                        • 	Analyzed complex customer feedback on product performance and product lifecycle, transforming it into 30+ precise technical requirements 
-                        that guided strategic product improvements, leading to a project revival.
-                        • 	Garnered strong support from senior executives and vice presidents by presenting a compelling case for a high-impact project initiative, 
-                        successfully securing over $10 million in funding and strategic backing to drive the project's success.
+                        •	Under Construction
                     </p>
 
                     <div className="link-container fade-in-view">

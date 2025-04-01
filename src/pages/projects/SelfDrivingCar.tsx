@@ -62,22 +62,17 @@ const SelfDrivingCar = () => {
 
                         {/* Right Side */}
                         <Grid.Col span={6}>
-                            <Carousel
-                                withIndicators
-                                height={400}
-                                slideSize="100%"
-                                slideGap="md"
-                                loop
-                                align="center"
-                                styles={{
-                                    control: {
-                                        backgroundColor: '#1DB954',
-                                    },
-                                }}
+                            <Image 
+                                src="../../assets/carDemo.jpg" 
+                                alt="Prototype Image" 
+                                radius="md"
                                 className="fade-in-view"
-                            >
-                                {slides}
-                            </Carousel>
+                                style={{
+                                    width: '100%',
+                                    height: '450px',
+                                    objectFit: 'cover',
+                                }}
+                            />
                         </Grid.Col>
                     </Grid>
 

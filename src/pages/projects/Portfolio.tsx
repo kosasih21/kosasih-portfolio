@@ -62,22 +62,17 @@ const Portfolio = () => {
 
                         {/* Right Side */}
                         <Grid.Col span={6}>
-                            <Carousel
-                                withIndicators
-                                height={400}
-                                slideSize="100%"
-                                slideGap="md"
-                                loop
-                                align="center"
-                                styles={{
-                                    control: {
-                                        backgroundColor: '#1DB954',
-                                    },
-                                }}
+                            <Image 
+                                src="../../assets/websiteDemo.png" 
+                                alt="Home Page" 
+                                radius="md"
                                 className="fade-in-view"
-                            >
-                                {slides}
-                            </Carousel>
+                                style={{
+                                    width: '100%',
+                                    height: '450px',
+                                    objectFit: 'cover',
+                                }}
+                            />
                         </Grid.Col>
                     </Grid>
 
@@ -85,27 +80,27 @@ const Portfolio = () => {
                     <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
                     <p className="fade-in-view">Key Skills: React.js, TypeScript, Mantine UI, CSS Animations, Responsive Design, GitHub Pages</p>
                     <p className="fade-in-view">
-                    • Designed and developed a sleek, responsive portfolio website using React with TypeScript and Mantine’s AppShell for layout and theming.  
-                    • Implemented a consistent dark theme across pages, with shared header navigation, project carousels, animated transitions, and modern grid layouts.  
-                    • Integrated scroll-based and in-view animations using `IntersectionObserver` and custom CSS to enhance interactivity and showcase smooth page transitions.  
-                    • Deployed using GitHub Pages with a lightweight, statically hosted setup to ensure fast performance and low maintenance.  
-                    • Organized project pages with reusable sections (hero, overview, technical details, challenges, etc.), optimized for readability and storytelling.  
+                        • Designed and developed a sleek, responsive portfolio website using React with TypeScript and Mantine’s AppShell for layout and theming.  <br />
+                        • Implemented a consistent dark theme across pages, with shared header navigation, project carousels, animated transitions, and modern grid layouts.  <br />
+                        • Integrated scroll-based and in-view animations using `IntersectionObserver` and custom CSS to enhance interactivity and showcase smooth page transitions.  <br />
+                        • Deployed using GitHub Pages with a lightweight, statically hosted setup to ensure fast performance and low maintenance.  <br />
+                        • Organized project pages with reusable sections (hero, overview, technical details, challenges, etc.), optimized for readability and storytelling.
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
                     <p className="fade-in-view">Scroll Animations, Theming Consistency, and Dynamic Layout Scaling</p>
                     <p className="fade-in-view">
-                    • One challenge was getting animations to trigger only when elements entered the viewport—solved using a clean `IntersectionObserver`-based approach for `fade-in-view` class elements.  
-                    • Balancing responsive layout with full-bleed design elements and custom breakpoints required iterative tuning using Mantine’s Grid and native CSS units.  
-                    • Ensured styling consistency across the app by centralizing theme colors, font sizes, spacing, and animation durations in global CSS and keeping logic out of component files.  
-                    • Handling z-index layers and backdrop blur effects across `AppShell` and content layers taught key lessons in how layered UI rendering behaves in Mantine.  
+                        • One challenge was getting animations to trigger only when elements entered the viewport—solved using a clean `IntersectionObserver`-based approach for `fade-in-view` class elements.  <br />
+                        • Balancing responsive layout with full-bleed design elements and custom breakpoints required iterative tuning using Mantine’s Grid and native CSS units.  <br />
+                        • Ensured styling consistency across the app by centralizing theme colors, font sizes, spacing, and animation durations in global CSS and keeping logic out of component files.  <br />
+                        • Handling z-index layers and backdrop blur effects across `AppShell` and content layers taught key lessons in how layered UI rendering behaves in Mantine.  
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Potential Extensions</h2>
                     <p className="fade-in-view">
-                    • I would add a lightweight content management system (CMS) or a markdown-powered backend to let me update projects without touching code.  
-                    • I’d also introduce a contact form backed by an API or serverless function (e.g., AWS Lambda or Formspree) for handling secure user submissions.  
-                    • Animating page transitions with Framer Motion and adding filtering/search capabilities to the projects section would enhance interactivity.  
+                    • I would add a lightweight content management system (CMS) or a markdown-powered backend to let me update projects without touching code.  <br />
+                    • I’d also introduce a contact form backed by an API or serverless function (e.g., AWS Lambda or Formspree) for handling secure user submissions.  <br />
+                    • Animating page transitions with Framer Motion and adding filtering/search capabilities to the projects section would enhance interactivity.  <br />
                     • Lastly, I'd optimize accessibility (ARIA, keyboard nav, contrast) and SEO (structured data, meta tags) to make the site more discoverable and inclusive.  
                     </p>
 

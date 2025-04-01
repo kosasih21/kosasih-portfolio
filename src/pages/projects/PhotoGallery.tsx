@@ -62,22 +62,17 @@ const PhotoGallery = () => {
 
                         {/* Right Side */}
                         <Grid.Col span={6}>
-                            <Carousel
-                                withIndicators
-                                height={400}
-                                slideSize="100%"
-                                slideGap="md"
-                                loop
-                                align="center"
-                                styles={{
-                                    control: {
-                                        backgroundColor: '#1DB954',
-                                    },
-                                }}
+                            <Image 
+                                src="../../assets/galleryDemo.png" 
+                                alt="Architecture" 
+                                radius="md"
                                 className="fade-in-view"
-                            >
-                                {slides}
-                            </Carousel>
+                                style={{
+                                    width: '100%',
+                                    height: '450px',
+                                    objectFit: 'cover',
+                                }}
+                            />
                         </Grid.Col>
                     </Grid>
 
@@ -85,28 +80,28 @@ const PhotoGallery = () => {
                     <h2 className="fade-in-view" style={{ marginTop: 55, marginBottom: 5 }}>Technical Details</h2>
                     <p className="fade-in-view">Key Skills: Flask, SQL, DynamoDB, AWS (S3, SES), JWT, Bcrypt, HTML/CSS, EXIF Parsing</p>
                     <p className="fade-in-view">
-                    • Built a full-stack photo gallery web app using Flask with both SQL (MySQL RDS) and NoSQL (DynamoDB) backends to explore architectural trade-offs.  
-                    • Implemented user authentication with secure JWT-based sessions, email confirmation via AWS SES, and password hashing with Bcrypt.  
-                    • Integrated AWS S3 for image storage with public-read access and dynamic URL generation for display in albums and photo pages.  
-                    • Created features such as album creation, photo upload with EXIF metadata extraction, and detailed photo views using server-side rendering.  
-                    • Developed search capabilities on both album and photo levels, supporting queries over titles, descriptions, tags, and EXIF metadata.  
+                    • Built a full-stack photo gallery web app using Flask with both SQL (MySQL RDS) and NoSQL (DynamoDB) backends to explore architectural trade-offs.  <br />
+                    • Implemented user authentication with secure JWT-based sessions, email confirmation via AWS SES, and password hashing with Bcrypt.  <br />
+                    • Integrated AWS S3 for image storage with public-read access and dynamic URL generation for display in albums and photo pages.  <br />
+                    • Created features such as album creation, photo upload with EXIF metadata extraction, and detailed photo views using server-side rendering.  <br />
+                    • Developed search capabilities on both album and photo levels, supporting queries over titles, descriptions, tags, and EXIF metadata.
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Challenges and Insights</h2>
                     <p className="fade-in-view">Stateful Logic, Cloud Resource Coordination, and Data Modeling Across SQL/NoSQL</p>
                     <p className="fade-in-view">
-                    • Managing user verification and login persistence across both storage architectures required a secure and flexible JWT strategy with cookie handling.  
-                    • AWS SES integration posed challenges due to sandboxing, forcing precise domain verification and error handling in the early stages of development.  
-                    • In the NoSQL version, designing a DynamoDB schema for albums and photos using composite keys (`albumID` + `photoID`) provided performance and scalability, but demanded careful handling of relational data patterns like joins.  
-                    • Ensured EXIF metadata extraction was consistent and lightweight, avoiding unnecessary overhead while maintaining valuable image context for search and filtering.  
-                    • Refined UI flow and error recovery logic to make file uploads, album/photo deletions, and account management feel smooth and reliable under all edge cases.  
+                    • Managing user verification and login persistence across both storage architectures required a secure and flexible JWT strategy with cookie handling.  <br />
+                    • AWS SES integration posed challenges due to sandboxing, forcing precise domain verification and error handling in the early stages of development.  <br />
+                    • In the NoSQL version, designing a DynamoDB schema for albums and photos using composite keys (`albumID` + `photoID`) provided performance and scalability, but demanded careful handling of relational data patterns like joins.  <br />
+                    • Ensured EXIF metadata extraction was consistent and lightweight, avoiding unnecessary overhead while maintaining valuable image context for search and filtering.  <br />
+                    • Refined UI flow and error recovery logic to make file uploads, album/photo deletions, and account management feel smooth and reliable under all edge cases.
                     </p>
 
                     <h2 className="fade-in-view" style={{ marginTop: 20, marginBottom: 5 }}>Potential Extensions</h2>
                     <p className="fade-in-view">
-                    • I would implement real-time updates via WebSockets or server-sent events to reflect album/photo changes instantly without page reloads.  
-                    • I'd add a robust image editor or cropping tool for users to enhance their photos before upload.  
-                    • I would also refactor the frontend into a React-based client with a REST or GraphQL API to allow mobile or desktop clients to integrate easily.  
+                    • I would implement real-time updates via WebSockets or server-sent events to reflect album/photo changes instantly without page reloads.  <br />
+                    • I'd add a robust image editor or cropping tool for users to enhance their photos before upload.  <br />
+                    • I would also refactor the frontend into a React-based client with a REST or GraphQL API to allow mobile or desktop clients to integrate easily.  <br />
                     • Lastly, I'd introduce tiered user roles with admin moderation capabilities, audit logging, and analytics to better understand user behavior and usage trends.  
                     </p>
 
