@@ -43,9 +43,10 @@ const Game = () => {
                         <Grid.Col span={6}>
                             <h2 className="fade-in-view">Project Overview</h2>
                             <Text className="about-text fade-in-view">
-                                A 2D fantasy platformer created in under 72 hours for a game jam. Built with Phaser.js, it includes animated sprites, collectible items, enemy logic, and level design.  
-                                The project demonstrates teamwork, time-boxed creativity, and the ability to ship a playable game under tight deadlines.  
-                                It was a fun exploration of pixel art, game mechanics, and responsive keyboard input.
+                                An embedded systems project utilizing a microcontroller (mbed-like) integrated with a uLCD display and multiple input buttons and switches. 
+                                Leveraged advanced software concepts, including interrupt-driven programming and real-time data handling, to create an interactive, 
+                                user-responsive hardware interface. This project combined hardware-software integration and embedded design skills, 
+                                demonstrating proficiency in both circuit implementation and robust firmware development.
                             </Text>
 
                             <div className="fade-in-view" style={{ marginTop: '20px' }}>
