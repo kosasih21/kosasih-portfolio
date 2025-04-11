@@ -139,7 +139,7 @@ const About = () => {
 
                     <Text className="custom-title fade-in-view">Georgia Institute of Technology</Text>
                     <Text className="custom-subtitle fade-in-view">Bachelor's in Computer Engineering, Devices & Distributed Systems and Software Design</Text>
-                    <Text className="about-text fade-in-view">College of Engineering, Electrical and Computer Engineering</Text>
+                    <Text className="about-text fade-in-view">College of Engineering, Electrical and Computer Engineering, Class of 2025</Text>
 
                     <Text className="custom-title fade-in-view">Lambert High School</Text>
                     <Text className="about-text fade-in-view">Suwanee, GA</Text>
