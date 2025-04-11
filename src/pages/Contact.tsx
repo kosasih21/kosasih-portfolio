@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Contact = () => {
     return (
         <AppShell header={{ height: 60 }} padding="md">
-            <AppShell.Main style={{ 
+            <AppShell.Main className="fullscreen-page" style={{ 
                 backgroundColor: 'transparent',
                 backdropFilter: 'blur(3px)',
             }}>

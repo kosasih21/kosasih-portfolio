@@ -27,6 +27,11 @@ html, body, #root, .mantine-AppShell-main {
     overflow-y: auto !important;
 }
 
+.fullscreen-page {
+    height: 100vh !important;
+    overflow: hidden;
+}
+
 /* Headings and Text */
 h1, h2, h3, p {
     margin-bottom: 16px;

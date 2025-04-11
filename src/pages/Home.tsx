@@ -64,7 +64,7 @@ const Home = () => {
 
     return (
         <AppShell header={{ height: 60 }} padding="md">
-            <AppShell.Main style={{ 
+            <AppShell.Main className="fullscreen-page" style={{ 
                 backgroundColor: 'transparent',
                 position: 'relative',
                 overflow: 'hidden',
