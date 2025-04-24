@@ -71,7 +71,20 @@ const Home = () => {
             }}>
                 <div className="container fade-in">
                     <div className="hero">
-                        <div className="wrapper">
+                        <div className="wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <img 
+                                src="../../assets/headshot.jpeg" 
+                                alt="Vincentius Kosasih headshot"
+                                style={{ 
+                                    width: '200px', 
+                                    height: '200px', 
+                                    borderRadius: '50%', 
+                                    objectFit: 'cover',
+                                    objectPosition: 'center top',
+                                    marginBottom: '1rem',
+                                    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)'
+                                }} 
+                            />
                             <h1 className="typing-demo non-clickable">
                                 <span>{text}</span>
                             </h1>
